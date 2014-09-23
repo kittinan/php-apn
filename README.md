@@ -1,5 +1,6 @@
 php-apn
 =======
+[![License](https://poser.pugx.org/kittinan/php-apn/license.svg)](https://packagist.org/packages/kittinan/php-apn)
 
 php-apn is a Simple Class for Apple Push Nofitication
 
