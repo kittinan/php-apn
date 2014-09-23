@@ -6,6 +6,8 @@
  * Description : Simple Apple Push Notification class
  */
 
+namespace KS;
+
 class APN {
   
   const URIDevelopment = 'ssl://gateway.sandbox.push.apple.com:2195';
@@ -33,7 +35,7 @@ class APN {
     stream_context_set_option($ctx, 'ssl', 'local_cert', $this->CertPath);
     stream_context_set_option($ctx, 'ssl', 'passphrase', $this->PassPhrase);
     
-    $URIPush = ($this->isProduction == true) ? APN::URIDevelopment : APN::URIDevelopment;
+    $URIPush = ($this->isProduction == true) ? \KS\APN::URIDevelopment : \KS\APN::URIDevelopment;
 
     // Open a connection to the APNS server
     $fp = stream_socket_client($URIPush, $err, $errstr, 60, STREAM_CLIENT_CONNECT | STREAM_CLIENT_PERSISTENT, $ctx);
